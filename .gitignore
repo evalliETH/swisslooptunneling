@@ -67,3 +67,8 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+
+# Custom
+static/v1-images/
+static/v2-images/

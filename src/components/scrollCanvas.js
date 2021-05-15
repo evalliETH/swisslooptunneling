@@ -1,117 +1,74 @@
-import React, { useEffect, useState } from 'react';
-import styled from "@emotion/styled"
-import { Controller, Scene } from 'react-scrollmagic';
+import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-const ImgCanvas = styled.canvas`
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100vw;
-  max-height: 100vh;
-  background-color: red;
-`;
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-const Myh1 = styled.h1`
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100vw;
-  max-height: 100vh;
-  z-index: 2;
-  color: white;
-`
-
-const ScrollCanvas = ({ progress }) => {
-  const imgCanvas = React.createRef();
-  const frameCount = 250; // amount of animation frames (i.e. images)
-
-  const [frameIndex, setFrameIndex] = useState(0);
-  // const [img, setImg] = useState(new Image());
-  let img = new Image();
+export default function ScrollCanvas(props) {
 
   useEffect(() => {
-    const context = imgCanvas.current.getContext("2d");
-    context.translate(0.5, 0.5);
+    const html = document.documentElement;
+    const canvas = document.getElementById("hero-lightpass");
+    const context = canvas.getContext("2d");
 
-    // Set display size (vw/vh).
-    var sizeWidth = 100 * window.innerWidth / 100,
-      sizeHeight = 100 * window.innerHeight / 100 || 766;
+    const frameCount = 250;
+    const currentFrame = index => (
+      //`https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+      `/v2-images/${index.toString().padStart(4, '0')}.jpg`
+    )
 
-    //Setting the canvas site and width to be responsive 
-    imgCanvas.current.width = sizeWidth;
-    imgCanvas.current.height = sizeHeight;
-    imgCanvas.current.style.width = sizeWidth;
-    imgCanvas.current.style.height = sizeHeight;
+    
 
     const preloadImages = () => {
     for (let i = 1; i < frameCount; i++) {
-      console.log("preload " + i);
-        img = new Image();
+        const img = new Image();
         img.src = currentFrame(i);
       }
     };
 
-    img = new Image();
+    const img = new Image()
     img.src = currentFrame(1);
+    // canvas.width=1920;
+    // canvas.height=1080;
+
+    // Make it visually fill the positioned parent
+    canvas.style.width ='100%';
+    canvas.style.height='100%';
+    // ...then set the internal size to match
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    const scale = Math.min(canvas.width / img.width, canvas.height / img.height);
+    const left = canvas.width / 2 - (img.width * scale) / 2;
+
     img.onload=function(){
-      context.drawImage(img, 0, 0, sizeWidth, sizeHeight);
+      context.drawImage(img, left, 0, img.width * scale, img.height * scale);
     }
-/*
-    function resizeCanvas() {
-            imgCanvas.current.width = window.innerWidth;
-            imgCanvas.current.height = window.innerHeight;
-
-            context.drawImage(img, 0, 0);
-    }
-    resizeCanvas();*/
-
-
-    preloadImages();
-  }, [])
-
-  const currentFrame = index => (
-    //`https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
-    `/${index.toString().padStart(4, '0')}.jpg`
-  )
-  
-  useEffect(() => {    
-    const context = imgCanvas.current.getContext("2d");
-
-     // Set display size (vw/vh).
-     var sizeWidth = 100 * window.innerWidth / 100,
-     sizeHeight = 100 * window.innerHeight / 100 || 766;
-
-    //Setting the canvas site and width to be responsive 
-    imgCanvas.current.width = sizeWidth;
-    imgCanvas.current.height = sizeHeight;
-    imgCanvas.current.style.width = sizeWidth;
-    imgCanvas.current.style.height = sizeHeight;
 
     const updateImage = index => {
       img.src = currentFrame(index);
-      context.drawImage(img, 0, 0, sizeWidth, sizeHeight);
+      context.drawImage(img, left, 0, img.width * scale, img.height * scale);
     }
-  
 
-    setFrameIndex(Math.min(
-      frameCount - 1,
-      Math.ceil(progress * frameCount)
-    ))
+    window.addEventListener('scroll', () => {  
+      console.log("scroll")
+      const scrollTop = html.scrollTop;
+      const maxScrollTop = html.scrollHeight - window.innerHeight;
+      const scrollFraction = scrollTop / maxScrollTop;
+      const frameIndex = Math.min(
+        frameCount - 1,
+        Math.ceil(scrollFraction * frameCount)
+      );
+      
+      requestAnimationFrame(() => updateImage(frameIndex + 1))
+    });
 
-    
-    updateImage(frameIndex + 1);
-
-    
+    preloadImages();
   })
-  
-  return(
-    <>
-    <Myh1>Test: {progress}</Myh1>
-    <ImgCanvas ref={imgCanvas}/>
-    </>
-  )
-}
 
-export default ScrollCanvas
+  return(
+    <canvas id="hero-lightpass" {...props}/>
+  )
+  
+
+}

@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from "@emotion/styled"
 import { Controller, Scene } from 'react-scrollmagic';
+import ScrollC from "../components/scrollC";
 
 const StickyStyled = styled.div`
   .section {
@@ -26,7 +27,7 @@ const Sticky = () => (
     <div className="section" />
     <Controller>
       <Scene duration={600} pin={true} enabled={true}>
-        <div className="sticky"><div>Pin Test</div></div>
+        <div className="sticky"><div><ScrollC />Pin Test</div></div>
       </Scene>
       <Scene duration={200} pin={{ pushFollowers: false }}>
         <div className="sticky"><div>Pin Test</div></div>
