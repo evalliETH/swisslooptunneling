@@ -265,9 +265,9 @@ const TeamPage = ({data}) => {
       "position": "Navigation"
     },
     {
-      "": "",
-      "": "",
-      "": ""
+      "slug": "",
+      "name": "",
+      "position": ""
     },
   ]
 
@@ -318,10 +318,10 @@ const TeamPage = ({data}) => {
     <DivisionWrapper key="business" css={css`background-color: ${color.BGLIGHT};`}>
       <h2>Business</h2>
       <TeamGrid>
-      {businessTeam.map((person) => {
+      {businessTeam.map((person, i) => {
           let imageData = businessImages.find(image => image.node.name === person.slug);
           return (
-          <Person pkey={person.slug} 
+          <Person key={person.slug !== "" ? person.slug : i} 
             name={person.name } 
             position={person.position}
             image={imageData ? imageData.node.childImageSharp.fluid : null} />
@@ -335,10 +335,10 @@ const TeamPage = ({data}) => {
     <DivisionWrapper key="mechanical" css={css`background-color: ${color.BGLIGHT};`}>
       <h2>Mechanical Engineers</h2>
       <TeamGrid>
-      {mechanicalTeam.map((person) => {
+      {mechanicalTeam.map((person, i) => {
           let imageData = mechanicalImages.find(image => image.node.name === person.slug);
           return (
-          <Person pkey={person.slug} 
+          <Person key={person.slug !== "" ? person.slug : i}
             name={person.name } 
             position={person.position}
             image={imageData ? imageData.node.childImageSharp.fluid : null} />
@@ -352,10 +352,10 @@ const TeamPage = ({data}) => {
     <DivisionWrapper key="electrical" css={css`background-color: ${color.BGLIGHT};`}>
       <h2>Electrical Engineers</h2>
       <TeamGrid>
-      {electricalTeam.map((person) => {
+      {electricalTeam.map((person, i) => {
           let imageData = electricalImages.find(image => image.node.name === person.slug);
           return (
-          <Person pkey={person.slug} 
+          <Person key={person.slug !== "" ? person.slug : i}
             name={person.name } 
             position={person.position}
             image={imageData ? imageData.node.childImageSharp.fluid : null} />
@@ -369,10 +369,10 @@ const TeamPage = ({data}) => {
     <DivisionWrapper key="civil" css={css`background-color: ${color.BGLIGHT};`}>
       <h2>Civil Engineers</h2>
       <TeamGrid>
-      {civilTeam.map((person) => {
+      {civilTeam.map((person, i) => {
           let imageData = civilImages.find(image => image.node.name === person.slug);
           return (
-          <Person pkey={person.slug} 
+          <Person key={person.slug !== "" ? person.slug : i}
             name={person.name } 
             position={person.position}
             image={imageData ? imageData.node.childImageSharp.fluid : null} />
@@ -411,11 +411,11 @@ const TeamPage = ({data}) => {
     <DivisionWrapper css={css`background-color: ${color.BGLIGHT};`}>
       <h2>Board</h2>
       <TeamGrid>
-      {boardTeam.map((person) => {
+      {boardTeam.map((person,i) => {
           let imageData = boardImages.find(image => image.node.name === person.slug);
 
           return (
-          <Person pkey={person.slug} 
+          <Person key={person.slug !== "" ? person.slug : i} 
             name={person.name} 
             position={person.position}
             image={imageData ? imageData.node.childImageSharp.fluid : null} />

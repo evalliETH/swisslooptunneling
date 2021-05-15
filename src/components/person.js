@@ -6,7 +6,7 @@ import styled from "@emotion/styled"
 
 const Person = (props) => {
   return (
-    <div className="person" key={props.pkey}>
+    <div className="person">
       {props.image != null && 
         <Image css={css`border-radius: 50%;`} fluid={props.image} />
       }

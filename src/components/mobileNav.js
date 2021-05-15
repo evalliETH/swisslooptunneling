@@ -48,7 +48,7 @@ class mobileNav extends Component {
             }           
           `}
         >
-            <a href="#" css={css`
+            <a href="#" alt="Navigation" css={css`
                 text-transform: lowercase;
                 position: absolute;
                 top: 0;

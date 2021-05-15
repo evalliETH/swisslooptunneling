@@ -78,6 +78,15 @@ const StickyStyled = styled.div`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     opacity: 0;
     transition: opacity 1s;
+
+    @media (max-width: 490px) {
+      & div {
+        min-width: 300px;
+        margin: 0 auto;
+        padding: 5px;
+      }
+    }
+
   }
 
   .sticky-right {
@@ -219,6 +228,7 @@ export default function ScrollPage(props) {
 
   return(
     <Layout fullwidth={true}>
+      <SEO title="Start" />
       <div css={css`height: 100%; width: 100%;`}>
         <canvas id="hero-lightpass" css={css`z-index: -1; background-color: black; transition: opacity 2s;`}/>
       </div>
@@ -239,6 +249,9 @@ export default function ScrollPage(props) {
                   @media (min-width: 1690px) {
                     font-size: 160px;
                   }
+                  @media (max-width: 360px) {
+                    font-size: 25px;
+                  }
                   `}>
                   <span>C</span>
                   <span>O</span>
@@ -252,7 +265,7 @@ export default function ScrollPage(props) {
                   <span>O</span>
                   <span>N</span>
                 </h1>
-                <h4 className="not-visible visible" css={css`font-weight: 400;`}>Swissloop Tunneling</h4>
+                <h2 className="not-visible visible" css={css`font-weight: 400; font-size: 1em;`}>Swissloop Tunneling</h2>
                 <div className="not-visible visible" css={css`margin-top: 25vh;`}>
                   <a href="#s1">
                   <StaticImage

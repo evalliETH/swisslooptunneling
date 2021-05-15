@@ -38,7 +38,7 @@ const Layout = ({ fullwidth, headerImg, children }) => {
         `}
       >
         <main css={css`margin-top: ${fullwidth ? '0' : '150px'};`}>{children}</main>
-        <footer
+        {/* <footer
           style={{
             marginTop: `2rem`,
             display: 'none',
@@ -47,7 +47,7 @@ const Layout = ({ fullwidth, headerImg, children }) => {
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        </footer> */}
       </div>
     </>
   )
