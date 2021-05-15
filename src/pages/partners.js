@@ -188,7 +188,7 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerPlatinumImages.map((element) => (
-          <a css={css`flex: 0 1 300px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+          <a key={element.node.name} css={css`flex: 0 1 300px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
             <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
           </a>
         ))
@@ -202,7 +202,7 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerMainImages.map((element) => (
-          <a css={css`flex: 0 1 500px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+          <a key={element.node.name} css={css`flex: 0 1 500px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
             <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
           </a>
         ))
@@ -244,7 +244,7 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerGoldImages.map((element) => (
-          <a css={css`flex: 0 1 200px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+          <a key={element.node.name} css={css`flex: 0 1 200px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
             <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
           </a>
         ))
@@ -264,7 +264,7 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerSilverImages.map((element) => (
-          <a css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+          <a key={element.node.name} css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
             <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
           </a>
         ))
@@ -284,7 +284,7 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerBronzeImages.map((element) => (
-          <a css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+          <a key={element.node.name} css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
             <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
           </a>
         ))
@@ -302,7 +302,7 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerPatronImages.map((element) => (
-          <a css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+          <a key={element.node.name} css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
             <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
           </a>
         ))
