@@ -18,13 +18,13 @@ export default function ContactPage(props) {
     <h1>Contact</h1>
     <StaticImage
       src="../images/swissloop-tunneling-contact.png"
-      height={350}
+      width={900}
       quality={95}
       placeholder={"tracedSVG"}
       //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
       formats={["AUTO", "WEBP", "AVIF"]}
       alt="A Gatsby astronaut"
-      css={css`width: 100%; margin-bottom: 50px;`}
+      css={css`width: 100%; margin-bottom: 50px; max-height: 350px;`}
     />
     <h2>Address</h2>
     <p>

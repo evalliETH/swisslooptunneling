@@ -28,7 +28,7 @@ export default function MediaPage(props) {
   
   return (
   <Layout>
-    <SEO title="Team" />
+    <SEO title="Media" />
     <h1>Media</h1>
     <div css={css`
       display: flex;

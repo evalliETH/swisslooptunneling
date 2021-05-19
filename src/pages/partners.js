@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
 import { css } from "@emotion/react"
@@ -101,7 +101,6 @@ const TeamGrid = styled.div`
       -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
       transform:  translateX(-50%) translateY(-50%) rotate(-90deg); 
             
-      color: red;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -161,11 +160,14 @@ const PartnersPage = ({data}) => {
     "swissloop_sponsor_logos_10-maedler": {"url" : "https://www.maedler.ch/"},
     "swissloop_sponsor_logos_11-spraying-systems": {"url" : "https://www.ssco.ch/"},
     "swissloop_sponsor_logos_11-twing": {"url" : "https://www.twing.swiss/"},
-    "swissloop_sponsor_logos_11-schilliger-holz": {"url" : "https://www.schilliger.ch/"},
+    "swissloop_sponsor_logos_13-schilliger-holz": {"url" : "https://www.schilliger.ch/"},
     "swissloop_sponsor_logos_12-nikon": {"url" : "https://www.nikon.ch/"},
-    "swissloop_sponsor_logos_08-alpha-associates": {"url" : "https://alpha-associates.ch/"}
-    
-
+    "swissloop_sponsor_logos_08-alpha-associates": {"url" : "https://alpha-associates.ch/"},
+    "swissloop_sponsor_logos_14-wika": {"url": "https://www.wika.ch/"},
+    "swissloop_sponsor_logos_15-meyer-blechtechnik": {"url": "https://www.meyer-blechtechnik.ch/"},
+    "swissloop_sponsor_logos_16-sick-logo": {"url": "http://www.sick.ch/"},
+    "swissloop_sponsor_logos_17-selec": {"url": "https://www.selec.ch"},
+    "swissloop_sponsor_logos_12-pomtava": {"url": "https://www.pomtava.com/"}
     }
   
 
@@ -176,7 +178,7 @@ const PartnersPage = ({data}) => {
     <h4>Challenging the status quo</h4>
     <p css={css`margin-bottom: 4em;`}>
       Swissloop Tunneling is creating synergies with industry and university partners to build a network in order to revolutionize the tunneling industry.
-      <br/>Are you interested in a partnership? Contact us for more information: <a href="info@swisslooptunneling.ch">info@swisslooptunneling.ch</a>
+      <br/>Are you interested in a partnership? Contact us for more information: <a href="mailto:info@swisslooptunneling.ch">info@swisslooptunneling.ch</a>
     </p>
 
     <h1>Founding Partners</h1>
@@ -188,8 +190,8 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerPlatinumImages.map((element) => (
-          <a key={element.node.name} css={css`flex: 0 1 300px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
-            <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
+          <a target="_blank" rel="noopener noreferrer" key={element.node.name} css={css`flex: 0 1 300px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+            <GatsbyImage css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} image={element.node.childImageSharp.gatsbyImageData} />
           </a>
         ))
       }
@@ -202,8 +204,8 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerMainImages.map((element) => (
-          <a key={element.node.name} css={css`flex: 0 1 500px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
-            <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
+          <a target="_blank" rel="noopener noreferrer" key={element.node.name} css={css`flex: 0 1 350px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+            <GatsbyImage css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} image={element.node.childImageSharp.gatsbyImageData} />
           </a>
         ))
       }
@@ -244,8 +246,8 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerGoldImages.map((element) => (
-          <a key={element.node.name} css={css`flex: 0 1 200px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
-            <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
+          <a target="_blank" rel="noopener noreferrer" key={element.node.name} css={css`flex: 0 1 200px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+            <GatsbyImage css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} image={element.node.childImageSharp.gatsbyImageData} />
           </a>
         ))
       }
@@ -264,8 +266,8 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerSilverImages.map((element) => (
-          <a key={element.node.name} css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
-            <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
+          <a target="_blank" rel="noopener noreferrer" key={element.node.name} css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+            <GatsbyImage css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} image={element.node.childImageSharp.gatsbyImageData} />
           </a>
         ))
       }
@@ -284,8 +286,8 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerBronzeImages.map((element) => (
-          <a key={element.node.name} css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
-            <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
+          <a target="_blank" rel="noopener noreferrer" key={element.node.name} css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+            <GatsbyImage css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} image={element.node.childImageSharp.gatsbyImageData} />
           </a>
         ))
       }
@@ -302,8 +304,8 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerPatronImages.map((element) => (
-          <a key={element.node.name} css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
-            <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
+          <a target="_blank" rel="noopener noreferrer" key={element.node.name} css={css`flex: 0 1 180px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+            <GatsbyImage css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} image={element.node.childImageSharp.gatsbyImageData} />
           </a>
         ))
       }
@@ -321,10 +323,13 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 450) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 350
+              quality: 90
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
@@ -333,10 +338,13 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 350) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 300
+              quality: 90
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
@@ -345,10 +353,13 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 250) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 250
+              quality: 90
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
@@ -357,10 +368,13 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 250) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 250
+              quality: 90
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
@@ -369,10 +383,13 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 250) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 200
+              quality: 90
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
@@ -381,20 +398,16 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 250) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 200
+              quality: 90
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
 		}
-    headerImage: file(sourceInstanceName: {eq: "assets"}, relativePath: { eq: "bannau-misc-eingang.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    },
   }
 `

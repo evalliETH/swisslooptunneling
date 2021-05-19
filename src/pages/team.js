@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
@@ -120,9 +120,6 @@ const TeamPage = ({data}) => {
       "name": "Rafael Dubach",
       "position": "Head Strategic Management"
     },
-    
-    
-
   ]
 
   const mechanicalTeam = [
@@ -324,7 +321,7 @@ const TeamPage = ({data}) => {
           <Person key={person.slug !== "" ? person.slug : i} 
             name={person.name } 
             position={person.position}
-            image={imageData ? imageData.node.childImageSharp.fluid : null} />
+            image={imageData ? imageData.node.childImageSharp.gatsbyImageData : null} />
           )
         })}
       </TeamGrid>
@@ -341,7 +338,7 @@ const TeamPage = ({data}) => {
           <Person key={person.slug !== "" ? person.slug : i}
             name={person.name } 
             position={person.position}
-            image={imageData ? imageData.node.childImageSharp.fluid : null} />
+            image={imageData ? imageData.node.childImageSharp.gatsbyImageData : null} />
           )
         })}
       </TeamGrid>
@@ -358,7 +355,7 @@ const TeamPage = ({data}) => {
           <Person key={person.slug !== "" ? person.slug : i}
             name={person.name } 
             position={person.position}
-            image={imageData ? imageData.node.childImageSharp.fluid : null} />
+            image={imageData ? imageData.node.childImageSharp.gatsbyImageData : null} />
           )
         })}
       </TeamGrid>
@@ -375,16 +372,24 @@ const TeamPage = ({data}) => {
           <Person key={person.slug !== "" ? person.slug : i}
             name={person.name } 
             position={person.position}
-            image={imageData ? imageData.node.childImageSharp.fluid : null} />
+            image={imageData ? imageData.node.childImageSharp.gatsbyImageData : null} />
           )
         })}
       </TeamGrid>
     </DivisionWrapper>
   )
 
-  const divisions = [businessDivision, mechanicalDivision, electricalDivision, civilDivision]
-  divisions.sort(() => Math.random() - 0.5); // randomize order
+  const divisionsArray = [businessDivision, mechanicalDivision, electricalDivision, civilDivision]
+  //divisions.sort(() => Math.random() - 0.5); // randomize order
 
+  const [divisions, setDivisions] = useState( divisionsArray )
+
+  useEffect(() => {
+    function shuffle(array) {
+      return [...array].sort(() => Math.random() - 0.5);
+    }
+    setDivisions( shuffle(divisions) )
+  }, [])
 
   return (
   <Layout headerImg={"team"}>
@@ -418,7 +423,7 @@ const TeamPage = ({data}) => {
           <Person key={person.slug !== "" ? person.slug : i} 
             name={person.name} 
             position={person.position}
-            image={imageData ? imageData.node.childImageSharp.fluid : null} />
+            image={imageData ? imageData.node.childImageSharp.gatsbyImageData : null} />
           )
         })}
       </TeamGrid>
@@ -429,6 +434,11 @@ const TeamPage = ({data}) => {
         division
       ))
     }
+
+    {/* { businessDivision } 
+    {mechanicalDivision} 
+    {electricalDivision} 
+    {civilDivision} */}
   </Layout>
   )
 }
@@ -440,10 +450,14 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 300) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 210
+              height: 210
+              quality: 80
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
@@ -452,10 +466,14 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 300) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 210
+              height: 210
+              quality: 80
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
@@ -464,10 +482,14 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 300) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 210
+              height: 210
+              quality: 80
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
@@ -476,10 +498,14 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 300) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 210
+              height: 210
+              quality: 80
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
@@ -488,20 +514,17 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					childImageSharp {
-						fluid(quality: 90, maxWidth: 300) {
-							...GatsbyImageSharpFluid_tracedSVG
-						}
-					},
+            gatsbyImageData(
+              width: 210
+              height: 210
+              quality: 80
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
 					name
 				}
 			}
 		}
-    headerImage: file(sourceInstanceName: {eq: "assets"}, relativePath: { eq: "bannau-misc-eingang.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    },
   }
 `

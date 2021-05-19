@@ -7,11 +7,12 @@ import { Controller, Scene } from 'react-scrollmagic';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {color} from "../constants"
 
 const StickyStyled = styled.div`
 
   .section {
-    height: 40vh;
+    height: 35vh;
     
   }
   
@@ -27,8 +28,7 @@ const StickyStyled = styled.div`
   }
 
   .fullwidth {
-    //background-color: blue;
-    height: 87vh;
+    height: 80vh; // initial: 87vh
     width: 100%;
     opacity: 0;
     margin: 0;
@@ -38,7 +38,6 @@ const StickyStyled = styled.div`
       color: white;
       width: 100%;
       max-width: 1260px;
-      /* background-color:red; */
       margin: auto;
     }
 
@@ -230,7 +229,7 @@ export default function ScrollPage(props) {
     <Layout fullwidth={true}>
       <SEO title="Start" />
       <div css={css`height: 100%; width: 100%;`}>
-        <canvas id="hero-lightpass" css={css`z-index: -1; background-color: black; transition: opacity 2s;`}/>
+        <canvas id="hero-lightpass" css={css`z-index: -1; background-color: ${color.BG}; transition: opacity 2s;`}/>
       </div>
       <StickyStyled>
         <div className="section" />
@@ -241,32 +240,50 @@ export default function ScrollPage(props) {
               <div className="test">Pin Test {event.type} {progress}</div>
             )}
           </Scene> */}
-          <Scene duration={150} classToggle={['.not-visible', 'visible']} reverse={true} indicators={false}>
+          <Scene duration={200} classToggle={['.not-visible', 'visible']} reverse={true} indicators={false}>
             <div className="opener">
               <div css={css`text-align: center;`}>
                 <h1 className="otitle not-visible visible" css={css`
-                  font-size: 10vw;
+                  font-size: 7vw;
+                  margin-bottom: 0;
                   @media (min-width: 1690px) {
-                    font-size: 160px;
+                    font-size: 140px;
                   }
                   @media (max-width: 360px) {
                     font-size: 25px;
                   }
                   `}>
-                  <span>C</span>
+                  <span>S</span>
+                  <span>W</span>
+                  <span>I</span>
+                  <span>S</span>
+                  <span>S</span>
+                  <span>L</span>
                   <span>O</span>
-                  <span>M</span>
+                  <span>O</span>
+                  <span>P</span>
+                </h1>
+                <h1 className="otitle not-visible visible" css={css`
+                  font-size: 7vw;
+                  @media (min-width: 1690px) {
+                    font-size: 140px;
+                  }
+                  @media (max-width: 360px) {
+                    font-size: 25px;
+                  }
+                  `}>
+                  <span>T</span>
+                  <span>U</span>
+                  <span>N</span>
+                  <span>N</span>
+                  <span>E</span>
+                  <span>L</span>
                   <span>I</span>
                   <span>N</span>
                   <span>G</span>
-                  <span>&nbsp;</span>
-                  <span>S</span>
-                  <span>O</span>
-                  <span>O</span>
-                  <span>N</span>
                 </h1>
-                <h2 className="not-visible visible" css={css`font-weight: 400; font-size: 1em;`}>Swissloop Tunneling</h2>
-                <div className="not-visible visible" css={css`margin-top: 25vh;`}>
+                {/* <h2 className="not-visible visible" css={css`font-weight: 400; font-size: 1em;`}>Swissloop Tunneling</h2> */}
+                <div className="not-visible visible" css={css`margin-top: 20vh;`}>
                   <a href="#s1">
                   <StaticImage
                     src="../images/scroll.png"
@@ -315,12 +332,17 @@ export default function ScrollPage(props) {
           </Scene>
 
           <Scene duration={500} pin={true}><div></div></Scene>
-          <Scene duration={1000} classToggle={['.sticky-down', 'visible']} reverse={true} pin={true} enabled={true} offset={-250} indicators={false}>
+          <Scene duration={1000} classToggle={['.sticky-down', 'visible']} reverse={true} pin={true} enabled={true} offset={-100} indicators={false}>
             {(progress) => (
               <div className="sticky-down">
-              <div css={css`transform: translateY(-${100*progress}px);`}>
+              <div css={css`
+                transform: translateY(-${100*progress}px);
+                @media (max-width: 400px) {
+                  transform: translateY(-${350*progress}px);
+                }
+                `}>
               <h1>Sustainability</h1>
-              <p>We want to achieve co2 savings potential through efficient planning and concrete technology measures. In a similar vein, we endeavour to set an example in long-term thinking in our production, diversity of our team and in our dedicated work attitude.</p>
+              <p>We want to achieve CO₂ savings potential through efficient planning and concrete technology measures. In a similar vein, we endeavour to set an example in long-term thinking in our production, diversity of our team and in our dedicated work attitude.</p>
               </div>
             </div>
             )}
@@ -357,8 +379,7 @@ export default function ScrollPage(props) {
               `}>
                 <h2>Hyperloop</h2>
                 <p>Hyperloop is a proposed futuristic mode of transportation, consisting of a sleek pod-like capsule which is levitating inside vacuum tubes, accelerating across the country at high speed, being inexpensive for people and goods. The technology is more sustainable than aviation and significantly faster than high-speed trains.
-                  <br/><br/>Existing conventional modes of transportation such as rail, road, water and air tend to be either relatively slow, expensive or a combination of both. Compared to the alternatives the new transportation system should be safer, faster, come at lower cost, should be more convenient, must be immune to weather, sustainably self-powering, resistant to Earthquakes and not disruptive to those along the route.
-                  <br/><br/>Swissloop is a student-led initiative with the goal of contributing to the research on and advancement of the Hyperloop technology and its application in the real world. The team designs and builds operational prototypes of transport capsules — so-called “pods” — with which they competed in the International Hyperloop Pod Competition. For five years (2015-2019), Elon Musk has challenged.
+                  <br/><br/>Swissloop is a student-led initiative with the goal of contributing to the research and advancement of the Hyperloop technology and its application in the real world. The team designs and builds operational prototypes of transport capsules — so-called “pods” — with which they competed in the International Hyperloop Pod Competition.
                 </p>
               </div>
 
