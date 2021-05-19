@@ -33,7 +33,7 @@ const Layout = ({ fullwidth, headerImg, children }) => {
       <div
         css={css`
           margin: 0 auto;
-          max-width: ${fullwidth ? '100%' : '1100px'};
+          max-width: ${fullwidth ? '100%' : '1260px'};
           padding: 0 1.0875rem 1.45rem;
         `}
       >
