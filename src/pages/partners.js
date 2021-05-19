@@ -15,24 +15,9 @@ import Person from "../components/person"
 
 const PartnerWrapper = styled.div`
   display: flex; 
-  background-color: ${color.BGLIGHT}; 
+  background-color: white;
   margin-bottom: 2em;
   transition: all 0.3s ease-in-out;
-  
-
-  & img {
-    -webkit-filter: grayscale(100%) invert(100%) contrast(200%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%) invert(100%) contrast(200%);
-  }
-
-  &:hover{
-    background-color: white;
-
-    & img {
-      -webkit-filter: grayscale(0%) invert(0%) contrast(100%);
-      filter: grayscale(0%) invert(0%) contrast(100%);
-    }
-  }
 `
 
 const LogoWrapper = styled.div`
@@ -41,11 +26,7 @@ const LogoWrapper = styled.div`
   flex-wrap: wrap; 
   align-items: center; 
   justify-content: center; 
-  //background-color: green; 
   width: 100%;
-
-
-  
 `
 
 const PartnerLabel = styled.div`
