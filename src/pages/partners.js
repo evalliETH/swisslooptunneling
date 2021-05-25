@@ -148,7 +148,9 @@ const PartnersPage = ({data}) => {
     "swissloop_sponsor_logos_15-meyer-blechtechnik": {"url": "https://www.meyer-blechtechnik.ch/"},
     "swissloop_sponsor_logos_16-sick-logo": {"url": "http://www.sick.ch/"},
     "swissloop_sponsor_logos_17-selec": {"url": "https://www.selec.ch"},
-    "swissloop_sponsor_logos_12-pomtava": {"url": "https://www.pomtava.com/"}
+    "swissloop_sponsor_logos_12-pomtava": {"url": "https://www.pomtava.com/"},
+    "swissloop_sponsor_logos_18-kbt-treuhand": {"url": "http://kbt.ch/"},
+    "swissloop_sponsor_logos_19-kbt-revisions": {"url": "http://kbt.ch/"}
     }
   
 
