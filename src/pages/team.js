@@ -73,11 +73,16 @@ const TeamPage = ({data}) => {
     {
       "slug": "fabian-wiedemeier",
       "name": "Fabian Wiedemeier",
-      "position": "Communication & Design"
+      "position": "Communication"
     },
     {
       "slug": "theresa-lanschutzer",
       "name": "Theresa Lanschützer",
+      "position": "Communication"
+    },
+    {
+      "slug": "zippora-orlik",
+      "name": "Zippora Orlik",
       "position": "Communication"
     },
     {
@@ -120,6 +125,21 @@ const TeamPage = ({data}) => {
       "name": "Rafael Dubach",
       "position": "Head Strategic Management"
     },
+    {
+      "slug": "",
+      "name": "",
+      "position": ""
+    },
+    {
+      "slug": "",
+      "name": "",
+      "position": ""
+    },
+    {
+      "slug": "",
+      "name": "",
+      "position": ""
+    },
   ]
 
   const mechanicalTeam = [
@@ -141,17 +161,12 @@ const TeamPage = ({data}) => {
     {
       "slug": "luca-entremont",
       "name": "Luca Entremont",
-      "position": "Soil Removal"
+      "position": "Lead Production"
     },
     {
       "slug": "elena-krasnova",
       "name": "Elena Krasnova",
       "position": "Lead Hydraulics"
-    },
-    {
-      "slug": "kire-micev",
-      "name": "Kire Micev",
-      "position": "Hydraulics"
     },
     {
       "slug": "eric-walti",
@@ -192,6 +207,11 @@ const TeamPage = ({data}) => {
       "slug": "albin-punnilathil",
       "name": "Albin Punnilathil",
       "position": "Driving Surface"
+    },
+    {
+      "slug": "",
+      "name": "",
+      "position": ""
     },
     {
       "slug": "",
@@ -272,7 +292,7 @@ const TeamPage = ({data}) => {
     {
       "slug": "miguel-figueiredo-nunes",
       "name": "Miguel Figueiredo Nunes",
-      "position": "Head Civil & Mech"
+      "position": "Project Manager"
     },
     {
       "slug": "davide-ferrari",

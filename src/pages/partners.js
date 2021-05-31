@@ -150,7 +150,10 @@ const PartnersPage = ({data}) => {
     "swissloop_sponsor_logos_17-selec": {"url": "https://www.selec.ch"},
     "swissloop_sponsor_logos_12-pomtava": {"url": "https://www.pomtava.com/"},
     "swissloop_sponsor_logos_18-kbt-treuhand": {"url": "http://kbt.ch/"},
-    "swissloop_sponsor_logos_19-kbt-revisions": {"url": "http://kbt.ch/"}
+    "swissloop_sponsor_logos_19-kbt-revisions": {"url": "http://kbt.ch/"},
+    "swissloop_sponsor_logos_13-dopag": {"url": "https://www.dopag.ch/"},
+    "swissloop_sponsor_logos_09-anb": {"url": "https://werkzeugbau.ch/"},
+    "swissloop_sponsor_logos_08-imhof-sew": {"url": "https://www.imhof-sew.ch/startseite.html"}
     }
   
 
