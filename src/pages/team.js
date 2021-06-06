@@ -174,11 +174,6 @@ const TeamPage = ({data}) => {
       "position": "Lead Structural"
     },
     {
-      "slug": "matteo-foschi",
-      "name": "Matteo Foschi",
-      "position": "Structural"
-    },
-    {
       "slug": "karl-werner",
       "name": "Karl Werner",
       "position": "Structural"
