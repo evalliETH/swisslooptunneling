@@ -157,7 +157,9 @@ const PartnersPage = ({data}) => {
     "swissloop_sponsor_logos_10-ernst-goehner": {"url": "http://www.ernst-goehner-stiftung.ch"},
     "swissloop_sponsor_logos_14-kohler": {"url": "https://www.kohler.ch"},
     "swissloop_sponsor_logos_09-revendo": {"url": "https://revendo.ch/"},
-    "swissloop_sponsor_logos_15-qualicut": {"url": "https://www.qualicut.ch/"}
+    "swissloop_sponsor_logos_15-qualicut": {"url": "https://www.qualicut.ch/"},
+    "swissloop_sponsor_logos_10-ggt": {"url": "https://gleitlager.ch/"},
+    "swissloop_sponsor_logos_16-vse": {"url": "https://www.vse-flow.com/"}
     }
   
 
