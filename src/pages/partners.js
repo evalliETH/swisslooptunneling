@@ -127,7 +127,7 @@ const PartnersPage = ({data}) => {
     "swissloop_sponsor_logos_05-faserplast": {"url" : "https://faserplast.ch/?keyword=faserplast&device=c&network=g&gclid=Cj0KCQjwrsGCBhD1ARIsALILBYobrdWmHLHJ-7xGY6ahSk571I77yInJybGKXqnGVKvknOU-nsRiNdYaAtJFEALw_wcB"},
     "swissloop_sponsor_logos_05-krohne": {"url" : "https://krohne.com/en/"},
     "swissloop_sponsor_logos_05-perforator": {"url" : "http://www.perforator.de/de/"},
-    "swissloop_sponsor_logos_06-implenia": {"url" : "https://implenia.com/"},
+    "swissloop_sponsor_logos_10-implenia": {"url" : "https://implenia.com/"},
     "swissloop_sponsor_logos_06-kluber-lubrication": {"url" : "https://www.klueber.com/ch/de/"},
     "swissloop_sponsor_logos_06-vivi-kola": {"url" : "https://vivikola.ch/en/"},
     "swissloop_sponsor_logos_07-nespresso": {"url" : "https://www.nespresso.com/pro"},
@@ -159,7 +159,18 @@ const PartnersPage = ({data}) => {
     "swissloop_sponsor_logos_09-revendo": {"url": "https://revendo.ch/"},
     "swissloop_sponsor_logos_15-qualicut": {"url": "https://www.qualicut.ch/"},
     "swissloop_sponsor_logos_10-ggt": {"url": "https://gleitlager.ch/"},
-    "swissloop_sponsor_logos_16-vse": {"url": "https://www.vse-flow.com/"}
+    "swissloop_sponsor_logos_16-vse": {"url": "https://www.vse-flow.com/"},
+    "swissloop_sponsor_logos_20-sireg": {"url": "https://www.sireggeotech.it/"},
+    "swissloop_sponsor_logos_17-qperior": {"url": "https://www.q-perior.com/"},
+    "swissloop_sponsor_logos_02-baugarten-zurich": {"url": "https://www.baugarten-zuerich.ch/"},
+    "swissloop_sponsor_logos_21-haba": {"url": "https://www.haba.ch/"},
+    "swissloop_sponsor_logos_18-wetter-ag": {"url": "https://www.wetter-ag.ch/"},
+    "swissloop_sponsor_logos_11-hansa-flex": {"url": "https://ch.hansa-flex.com/"},
+    "swissloop_sponsor_logos_12-schneider-electric": {"url": "https://www.se.com/"},
+    "swissloop_sponsor_logos_13-hsg": {"url": "https://www.unisg.ch/"},
+    "swissloop_sponsor_logos_14-tiefbauamt": {"url": "https://www.stadt-zuerich.ch/ted/de/index/taz.html"},
+    "swissloop_sponsor_logos_15-swiss": {"url": "https://www.swissworldcargo.com/"},
+    "swissloop_sponsor_logos_11-lombardi": {"url": "https://www.lombardi.ch/"}
     }
   
 
