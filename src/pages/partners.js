@@ -96,6 +96,7 @@ const DivisionWrapper = styled.div`
 
 const PartnersPage = ({data}) => {
   const partnerMainImages = data.partnerMainImages.edges
+  const foundingImages = data.foundingImages.edges
   const partnerPlatinumImages = data.partnerPlatinumImages.edges
   const partnerGoldImages = data.partnerGoldImages.edges
   const partnerSilverImages = data.partnerSilverImages.edges
@@ -170,7 +171,18 @@ const PartnersPage = ({data}) => {
     "swissloop_sponsor_logos_13-hsg": {"url": "https://www.unisg.ch/"},
     "swissloop_sponsor_logos_14-tiefbauamt": {"url": "https://www.stadt-zuerich.ch/ted/de/index/taz.html"},
     "swissloop_sponsor_logos_15-swiss": {"url": "https://www.swissworldcargo.com/"},
-    "swissloop_sponsor_logos_11-lombardi": {"url": "https://www.lombardi.ch/"}
+    "swissloop_sponsor_logos_11-lombardi": {"url": "https://www.lombardi.ch/"},
+    "swissloop_sponsor_logos_23-egolf": {"url": "https://www.egolfverpackungsag.ch/"},
+    "swissloop_sponsor_logos_22-kaeser": {"url": "https://ch.kaeser.com/"},
+    "swissloop_sponsor_logos_01-geb-weiss": {"url": "https://www.gw-world.com/"},
+    "swissloop_sponsor_logos_02-ixblue": {"url": "https://www.ixblue.com/"},
+    "swissloop_sponsor_logos_19-muttoni": {"url": "http://www.muttonicostruzioni.ch/"},
+    "swissloop_sponsor_logos_20-frutiger": {"url": "https://frutiger.com/"},
+    "swissloop_sponsor_logos_12-glencore": {"url": "https://www.glencore.ch/"},
+    "swissloop_sponsor_logos_22-svs": {"url": "https://www.svs.ch/"},
+    "swissloop_sponsor_logos_21-fgu": {"url": "https://www.swisstunnel.ch/"},
+    "swissloop_sponsor_logos_24-winkler": {"url": "https://www.winkler.eu/"},
+    "swissloop_sponsor_logos_25-alulineartechnik": {"url": "https://www.alulineartechnik.ch/"}
     }
   
 
@@ -192,7 +204,7 @@ const PartnersPage = ({data}) => {
       <PartnerLabel><span>Founding&nbsp;Partner</span></PartnerLabel>
       <LogoWrapper>
       {
-        partnerPlatinumImages.map((element) => (
+        foundingImages.map((element) => (
           <a target="_blank" rel="noopener noreferrer" key={element.node.name} css={css`flex: 0 1 300px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
             <GatsbyImage css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} image={element.node.childImageSharp.gatsbyImageData} />
           </a>
@@ -215,8 +227,8 @@ const PartnersPage = ({data}) => {
       </LogoWrapper>
     </PartnerWrapper>
 
-    {/* <PartnerWrapper css={css`
-      min-height: 200px;
+    <PartnerWrapper css={css`
+      /* min-height: 200px; */
       &:hover {
         & > :first-child {
           background-color: #E5E4E2;
@@ -229,13 +241,13 @@ const PartnersPage = ({data}) => {
       <LogoWrapper>
       {
         partnerPlatinumImages.map((element) => (
-          <a css={css`flex: 0 1 300px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
-            <Image css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} fluid={element.node.childImageSharp.fluid} />
+          <a target="_blank" rel="noopener noreferrer" key={element.node.name} css={css`flex: 0 1 300px;`} href={meta[element.node.name] ? meta[element.node.name].url : ''}>
+            <GatsbyImage css={css`margin: 2em 1em;`} alt={meta[element.node.name] ? meta[element.node.name].name : 'Swissloop Tunneling Partner'} image={element.node.childImageSharp.gatsbyImageData} />
           </a>
         ))
       }
       </LogoWrapper>
-    </PartnerWrapper> */}
+    </PartnerWrapper>
 
     <PartnerWrapper css={css`
       &:hover {
@@ -328,6 +340,21 @@ export const pageQuery = graphql`
 					childImageSharp {
             gatsbyImageData(
               width: 350
+              quality: 90
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          },
+					name
+				}
+			}
+		}
+    foundingImages: allFile(filter: {relativeDirectory: {eq: "partners/founding"}}, sort: {order: ASC, fields: name}) {
+			edges {
+				node {
+					childImageSharp {
+            gatsbyImageData(
+              width: 300
               quality: 90
               layout: CONSTRAINED
               placeholder: TRACED_SVG
