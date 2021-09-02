@@ -182,7 +182,15 @@ const PartnersPage = ({data}) => {
     "swissloop_sponsor_logos_22-svs": {"url": "https://www.svs.ch/"},
     "swissloop_sponsor_logos_21-fgu": {"url": "https://www.swisstunnel.ch/"},
     "swissloop_sponsor_logos_24-winkler": {"url": "https://www.winkler.eu/"},
-    "swissloop_sponsor_logos_25-alulineartechnik": {"url": "https://www.alulineartechnik.ch/"}
+    "swissloop_sponsor_logos_25-alulineartechnik": {"url": "https://www.alulineartechnik.ch/"},
+    "swissloop_sponsor_logos_26-prusa": {"url": "https://www.prusa3d.com/"},
+    "swissloop_sponsor_logos_16-sottas": {"url": "https://www.sottas.ch/"},
+    "swissloop_sponsor_logos_27-carify": {"url": "https://www.carify.com/"},
+    "swissloop_sponsor_logos_23-tph": {"url": "https://www.tph-bausysteme.com/"},
+    "swissloop_sponsor_logos_28-elcase": {"url": "https://elcase.ch"},
+    "swissloop_sponsor_logos_26-kaeser": {"url": "https://us.kaeser.com/"},
+    "swissloop_sponsor_logos_29-doka": {"url": "https://www.doka.com/"},
+    "swissloop_sponsor_logos_30-dhl": {"url": "https://www.dhl.com/"},
     }
   
 

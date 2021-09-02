@@ -8,6 +8,8 @@ import { Controller, Scene } from 'react-scrollmagic';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {color} from "../constants"
+import AlphaSvg from "../assets/alpha_letter.svg"
+
 
 const StickyStyled = styled.div`
 
@@ -244,24 +246,33 @@ export default function ScrollPage(props) {
             <div className="opener">
               <div css={css`text-align: center;`}>
                 <h1 className="otitle not-visible visible" css={css`
-                  font-size: 7vw;
+                  font-size: 8vw;
                   margin-bottom: 0;
                   @media (min-width: 1690px) {
                     font-size: 140px;
+                  }
+                  @media (max-width: 555px) {
+                    font-size: 40px;
                   }
                   @media (max-width: 360px) {
                     font-size: 25px;
                   }
                   `}>
-                  <span>S</span>
-                  <span>W</span>
-                  <span>I</span>
-                  <span>S</span>
-                  <span>S</span>
+                  <span>G</span>
+                  <span>R</span>
+                  <span>O</span>
+                  <span>U</span>
+                  <span>N</span>
+                  <span>D</span>
+                  <span>H</span>
+                  <span>O</span>
+                  <span css={css`margin-right: 0.5em;`}>G</span>
+                  <span></span>
+                  <span>A</span>
                   <span>L</span>
-                  <span>O</span>
-                  <span>O</span>
                   <span>P</span>
+                  <span>H</span>
+                  <span>A</span>
                 </h1>
                 <h1 className="otitle not-visible visible" css={css`
                   font-size: 7vw;
@@ -272,16 +283,9 @@ export default function ScrollPage(props) {
                     font-size: 25px;
                   }
                   `}>
-                  <span>T</span>
-                  <span>U</span>
-                  <span>N</span>
-                  <span>N</span>
-                  <span>E</span>
-                  <span>L</span>
-                  <span>I</span>
-                  <span>N</span>
-                  <span>G</span>
+                  
                 </h1>
+                <p css={css`font-size: 1.1em; margin-top: 3em;`}>Swissloop Tunneling @ Not-A-Boring Competition in Las Vegas 6th - 12th September</p>
                 {/* <h2 className="not-visible visible" css={css`font-weight: 400; font-size: 1em;`}>Swissloop Tunneling</h2> */}
                 <div className="not-visible visible" css={css`margin-top: 20vh;`}>
                   <a href="#s1">
@@ -312,7 +316,7 @@ export default function ScrollPage(props) {
               <div id="s1" className="sticky-left">
               <div css={css`transform: translateY(-${100*progress}px);`}>
               <h1>SPEARHEAD RESEARCH</h1>
-              <p>Our vision is to spearhead the research on infrastructure which allows the (Hyper)loop concept to become reality. To accomplish this goal, we will build the fastest and most precise tunneling robot in the world.</p>
+              <p>Our vision is to spearhead the research on infrastructure which allows the (Hyper)loop concept to become reality. To accomplish this goal, we developed our innovative tunneling robot Groundhog Alpha.</p>
               </div>
             </div>
             )}
@@ -324,7 +328,7 @@ export default function ScrollPage(props) {
               <div id="s2" className="sticky-left">
               <div css={css`transform: translateY(-${100*progress}px);`}>
               <h1>Not-A-Boring-Competition</h1>
-              <p>We are the new student team of ETH Zürich to compete in Elon Musk’s Not-A-Boring-Competition. The team was founded in 2020 and brings together over 40 students with expertise in mechanical- and electrical engineering as well as various business-related fields. Our team draws on the experience of the SpaceX Hyperloop Competition and consists of former members of the Swissloop Team of 2018/19, which ranked second place and received the Innovation Award.
+              <p>We are the official student team of ETH Zurich to compete in Elon Musk’s Not-A-Boring-Competition. The team was founded in 2020 and brings together over 40 students with expertise in mechanical- and electrical engineering as well as various business-related fields. We’re part of the digging dozen and were invited by Elon Musk’s Boring Company to compete Las Vegas from the 6th to the 12th of September 2021.
 </p>
               </div>
             </div>
@@ -342,7 +346,7 @@ export default function ScrollPage(props) {
                 }
                 `}>
               <h1>Sustainability</h1>
-              <p>We want to achieve CO₂ savings potential through efficient planning and concrete technology measures. In a similar vein, we endeavour to set an example in long-term thinking in our production, diversity of our team and in our dedicated work attitude.</p>
+              <p>We want to achieve CO₂ savings through efficient planning and innovative technologies. In a similar vein, we endeavor to set an example in long-term thinking in our production, diversity of our team and in our dedicated work attitude.</p>
               </div>
             </div>
             )}
@@ -379,7 +383,6 @@ export default function ScrollPage(props) {
               `}>
                 <h2>Hyperloop</h2>
                 <p>Hyperloop is a proposed futuristic mode of transportation, consisting of a sleek pod-like capsule which is levitating inside vacuum tubes, accelerating across the country at high speed, being inexpensive for people and goods. The technology is more sustainable than aviation and significantly faster than high-speed trains.
-                  <br/><br/>Swissloop is a student-led initiative with the goal of contributing to the research and advancement of the Hyperloop technology and its application in the real world. The team designs and builds operational prototypes of transport capsules — so-called “pods” — with which they competed in the International Hyperloop Pod Competition.
                 </p>
               </div>
 
@@ -391,7 +394,7 @@ export default function ScrollPage(props) {
               `}>
                 <h2>Hyperloop Tunneling</h2>
                 <p>
-                  To further develop a holistic Hyperloop concept, Swissloop and Swissloop Tunneling are working closely together. The goal of Swissloop and Swissloop Tunneling is to conduct research and development for the advancement of the Hyperloop concept and its realization, enabling fast and safe transportation. Thus, Swissloop Tunneling focuses on tunnel boring robots, while Swissloop’s focal points remain on the so-called pods, capable of travelling at high-speed in low-pressure or vacuum tubes. This allows us to exploit synergies and ultimately create profound development of both systems. To ensure long-term and sustainable cooperation, Swissloop Tunneling is operating under a license agreement with Swissloop.
+                To further develop a holistic Hyperloop concept, Swissloop Tunneling partnered up with Swissloop, a student-led initiative with the goal of designing and building operational prototypes of hyperloop pods. The goal of Swissloop and Swissloop Tunneling is to conduct research and development for the advancement of the Hyperloop concept and its realization, enabling fast and safe transportation. Thus, Swissloop Tunneling focuses on tunnel boring robots, while Swissloop’s focal points remain on the so-called pods, capable of travelling at high-speed in low-pressure or vacuum tubes. This allows us to exploit synergies and ultimately create profound development of both systems.
 
                 </p>
               </div>

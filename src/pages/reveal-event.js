@@ -105,6 +105,56 @@ const RevealEventPage = () => {
         width={1280}
       />
       <StaticImage
+        src="../images/revealevent/swissloop-tunneling-reveal-event8.jpg"
+        quality={95}
+        placeholder={"tracedSVG"}
+        layout="constrained"
+        width={1280}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+      />
+      <StaticImage
+        src="../images/revealevent/swissloop-tunneling-reveal-event9.jpg"
+        quality={95}
+        placeholder={"tracedSVG"}
+        layout="constrained"
+        width={1280}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+      />
+      <StaticImage
+        src="../images/revealevent/swissloop-tunneling-reveal-event10.jpg"
+        quality={95}
+        placeholder={"tracedSVG"}
+        layout="constrained"
+        width={1280}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+      />
+      <StaticImage
+        src="../images/revealevent/swissloop-tunneling-reveal-event11.jpg"
+        quality={95}
+        placeholder={"tracedSVG"}
+        layout="constrained"
+        width={1280}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+      />
+      <StaticImage
+        src="../images/revealevent/swissloop-tunneling-reveal-event12.jpg"
+        quality={95}
+        placeholder={"tracedSVG"}
+        layout="constrained"
+        width={1280}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+      />
+      <StaticImage
         src="../images/revealevent/swissloop-tunneling-reveal-event1.jpg"
         quality={95}
         placeholder={"tracedSVG"}
@@ -117,6 +167,7 @@ const RevealEventPage = () => {
       </div>
       </SRLWrapper>
     </SimpleReactLightbox>
+    <p css={css`text-align:right; margin-top: 1em;`}>Fotografie © Janick Entremont</p>
   </Layout>
   )
 }

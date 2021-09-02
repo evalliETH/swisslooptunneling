@@ -10,6 +10,7 @@ import {spacing, color} from "../constants"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Person from "../components/person"
+import Layla from "../components/layla"
 
 
 const TeamGrid = styled.div`
@@ -61,28 +62,13 @@ const TeamPage = ({data}) => {
   ]
   const businessTeam = [ 
     {
-      "slug": "chrissie-meyer",
-      "name": "Chrissie Meyer",
-      "position": "Co-Head Communication"
-    },
-    {
       "slug": "layla-just",
       "name": "Layla Just",
-      "position": "Co-Head Communication & Design"
-    },
-    {
-      "slug": "fabian-wiedemeier",
-      "name": "Fabian Wiedemeier",
-      "position": "Communication"
+      "position": "Head Communication"
     },
     {
       "slug": "theresa-lanschutzer",
       "name": "Theresa Lanschützer",
-      "position": "Communication"
-    },
-    {
-      "slug": "zippora-orlik",
-      "name": "Zippora Orlik",
       "position": "Communication"
     },
     {
@@ -94,11 +80,6 @@ const TeamPage = ({data}) => {
       "slug": "joel-amstutz",
       "name": "Joël Amstutz",
       "position": "Design"
-    },
-    {
-      "slug": "tarek-alakmeh",
-      "name": "Tarek Alakmeh",
-      "position": "Website"
     },
     {
       "slug": "marc-bar",
@@ -114,16 +95,6 @@ const TeamPage = ({data}) => {
       "slug": "luca-erdmann",
       "name": "Luca Erdmann",
       "position": "Project Management"
-    },
-    {
-      "slug": "florian-berger",
-      "name": "Florian Berger",
-      "position": "Project Management"
-    },
-    {
-      "slug": "rafael-dubach",
-      "name": "Rafael Dubach",
-      "position": "Head Strategic Management"
     },
     {
       "slug": "",
@@ -154,11 +125,6 @@ const TeamPage = ({data}) => {
       "position": "Soil Removal"
     },
     {
-      "slug": "sofya-aman",
-      "name": "Sofya Aman",
-      "position": "Soil Removal"
-    },
-    {
       "slug": "luca-entremont",
       "name": "Luca Entremont",
       "position": "Lead Production"
@@ -179,11 +145,6 @@ const TeamPage = ({data}) => {
       "position": "Structural"
     },
     {
-      "slug": "maxim-rojas",
-      "name": "Maxim Rojas",
-      "position": "Tunnel Lining"
-    },
-    {
       "slug": "felix-von-samson",
       "name": "Felix von Samson",
       "position": "Tunnel Lining"
@@ -194,14 +155,14 @@ const TeamPage = ({data}) => {
       "position": "Tunnel Lining"
     },
     {
-      "slug": "pranav-rajyaguru",
-      "name": "Pranav Rajyaguru",
-      "position": "FEA Simulation"
-    },
-    {
       "slug": "albin-punnilathil",
       "name": "Albin Punnilathil",
       "position": "Driving Surface"
+    },
+    {
+      "slug": "",
+      "name": "",
+      "position": ""
     },
     {
       "slug": "",
@@ -232,19 +193,9 @@ const TeamPage = ({data}) => {
       "position": "Lead LV Electronics & Software"
     },
     {
-      "slug": "junwoo-hwang",
-      "name": "Junwoo Hwang",
-      "position": "LV Electronics"
-    },
-    {
       "slug": "matej-durajka",
       "name": "Matej Durajka",
       "position": "Lead Power Systems"
-    },
-    {
-      "slug": "meindi-zahiri",
-      "name": "Meindi Zahiri",
-      "position": "Lead Telemetry"
     },
     {
       "slug": "saad-himmi",
@@ -252,13 +203,13 @@ const TeamPage = ({data}) => {
       "position": "Lead Navigation"
     },
     {
-      "slug": "judy-hajar",
-      "name": "Judy Hajar",
-      "position": "Navigation"
+      "slug": "tarek-alakmeh",
+      "name": "Tarek Alakmeh",
+      "position": "Lead Telemetry & Website"
     },
     {
-      "slug": "reda-el-azzouzi",
-      "name": "Reda El Azzouzi",
+      "slug": "judy-hajar",
+      "name": "Judy Hajar",
       "position": "Navigation"
     },
     {
@@ -269,12 +220,22 @@ const TeamPage = ({data}) => {
     {
       "slug": "tianhong-gan",
       "name": "Tianhong Gan",
-      "position": "Navigation"
+      "position": "Control Systems"
     },
     {
       "slug": "nigalsan-ravichandran",
       "name": "Nigalsan Ravichandran",
       "position": "Navigation"
+    },
+    {
+      "slug": "",
+      "name": "",
+      "position": ""
+    },
+    {
+      "slug": "",
+      "name": "",
+      "position": ""
     },
     {
       "slug": "",
@@ -287,7 +248,7 @@ const TeamPage = ({data}) => {
     {
       "slug": "miguel-figueiredo-nunes",
       "name": "Miguel Figueiredo Nunes",
-      "position": "Project Manager"
+      "position": "Technical Project Manager"
     },
     {
       "slug": "davide-ferrari",
@@ -326,17 +287,30 @@ const TeamPage = ({data}) => {
     },
   ]
 
+  const layla1 = businessImages.find(image => image.node.name === "layla-just-1");
+  const layla2 = businessImages.find(image => image.node.name === "layla-just-2");
+  const tarek = electricalImages.find(image => image.node.name === "tarek-alakmeh");
+
   const businessDivision = (
     <DivisionWrapper key="business" css={css`background-color: ${color.BGLIGHT};`}>
       <h2>Business</h2>
       <TeamGrid>
+      <Layla 
+        name={"Layla Just"} 
+        position={"Head Communication"}
+        image={layla1 ? layla1.node.childImageSharp.gatsbyImageData : null}
+        image2={layla2 ? layla2.node.childImageSharp.gatsbyImageData : null}
+        image3={tarek ? tarek.node.childImageSharp.gatsbyImageData : null} />
       {businessTeam.map((person, i) => {
           let imageData = businessImages.find(image => image.node.name === person.slug);
           return (
+          person.slug != "layla-just" ? 
           <Person key={person.slug !== "" ? person.slug : i} 
             name={person.name } 
             position={person.position}
-            image={imageData ? imageData.node.childImageSharp.gatsbyImageData : null} />
+            image={imageData ? imageData.node.childImageSharp.gatsbyImageData : null}
+            />
+          : ""
           )
         })}
       </TeamGrid>
@@ -414,7 +388,7 @@ const TeamPage = ({data}) => {
       height={500}
       quality={95}
       placeholder={"tracedSVG"}
-      //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: true }}
+      tracedSVGOptions={{ background: "black", color: "white", blackOnWhite: false }}
       formats={["AUTO", "WEBP", "AVIF"]}
       alt="A Gatsby astronaut"
       css={css`width: 100%; margin-bottom: 50px;`}
