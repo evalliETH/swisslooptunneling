@@ -191,6 +191,8 @@ const PartnersPage = ({data}) => {
     "swissloop_sponsor_logos_26-kaeser": {"url": "https://us.kaeser.com/"},
     "swissloop_sponsor_logos_29-doka": {"url": "https://www.doka.com/"},
     "swissloop_sponsor_logos_30-dhl": {"url": "https://www.dhl.com/"},
+    "swissloop_sponsor_logos_13-jorimann": {"url": "https://joerimann.com/"},
+    "swissloop_sponsor_logos_31-spanset": {"url": "https://www.spanset.com/"},
     }
   
 

@@ -71,7 +71,8 @@ const MediaPage = ({data}) => {
     <div>
       <p>
         Download our Press Kit Documents: <br/>
-        <Button target="_blank" rel="noopener noreferrer" href="/media/Media-Kit-Download-EN.pdf">Swissloop Tunneling Media Kit - EN</Button>
+        <Button target="_blank" rel="noopener noreferrer" href="/media/Media-Download-EN.docx">Swissloop Tunneling Media Kit - EN</Button>
+        <Button target="_blank" rel="noopener noreferrer" href="/media/Media-Download-DE.docx">Swissloop Tunneling Media Kit - DE</Button>
         <Button href="/media/Pictures-2021.zip">Pictures 2021</Button>
       </p>            
     </div>

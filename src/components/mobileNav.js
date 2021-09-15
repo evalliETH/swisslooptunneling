@@ -61,6 +61,9 @@ class mobileNav extends Component {
             <NavLink to="/">
               Start
             </NavLink>
+            <NavLink to="/tbm">
+              TBM
+            </NavLink>
             <NavLink to="/team">
               Team
             </NavLink>

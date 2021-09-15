@@ -248,15 +248,24 @@ export default function ScrollPage(props) {
                 <h1 className="otitle not-visible visible" css={css`
                   font-size: 8vw;
                   margin-bottom: 0;
-                  @media (min-width: 1690px) {
-                    font-size: 140px;
+                  .break {
+                    display: none;
                   }
-                  @media (max-width: 555px) {
+                  @media (min-width: 1460px) {
+                    font-size: 110px;
+                  }
+                  @media (max-width: 575px) {
                     font-size: 40px;
+                  }
+                  @media (max-width: 515px) {
+                    .break {
+                      display: block;
+                    }
                   }
                   @media (max-width: 360px) {
                     font-size: 25px;
                   }
+                  
                   `}>
                   <span>G</span>
                   <span>R</span>
@@ -268,6 +277,7 @@ export default function ScrollPage(props) {
                   <span>O</span>
                   <span css={css`margin-right: 0.5em;`}>G</span>
                   <span></span>
+                  <div className="break"></div>
                   <span>A</span>
                   <span>L</span>
                   <span>P</span>
