@@ -10,8 +10,6 @@ import {spacing, color} from "../constants"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Person from "../components/person"
-import Layla from "../components/layla"
-
 
 const TeamGrid = styled.div`
   display: flex;
@@ -62,7 +60,7 @@ const TeamPage = ({data}) => {
   ]
   const businessTeam = [ 
     {
-      "slug": "layla-just",
+      "slug": "layla-just-1",
       "name": "Layla Just",
       "position": "Head Communication"
     },
@@ -285,34 +283,22 @@ const TeamPage = ({data}) => {
       "name": "",
       "position": ""
     },
+    
   ]
-
-  const layla1 = businessImages.find(image => image.node.name === "layla-just-1");
-  const layla2 = businessImages.find(image => image.node.name === "layla-just-2");
-  const tarek = electricalImages.find(image => image.node.name === "tarek-alakmeh");
 
   const businessDivision = (
     <DivisionWrapper key="business" css={css`background-color: ${color.BGLIGHT};`}>
       <h2>Business</h2>
       <TeamGrid>
-      <Layla 
-        name={"Layla Just"} 
-        position={"Head Communication"}
-        image={layla1 ? layla1.node.childImageSharp.gatsbyImageData : null}
-        image2={layla2 ? layla2.node.childImageSharp.gatsbyImageData : null}
-        image3={tarek ? tarek.node.childImageSharp.gatsbyImageData : null} />
       {businessTeam.map((person, i) => {
           let imageData = businessImages.find(image => image.node.name === person.slug);
           return (
-          person.slug != "layla-just" ? 
           <Person key={person.slug !== "" ? person.slug : i} 
             name={person.name } 
             position={person.position}
             image={imageData ? imageData.node.childImageSharp.gatsbyImageData : null}
             />
-          : ""
-          )
-        })}
+        )})}
       </TeamGrid>
     </DivisionWrapper>
   )
