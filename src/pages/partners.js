@@ -193,6 +193,8 @@ const PartnersPage = ({data}) => {
     "swissloop_sponsor_logos_30-dhl": {"url": "https://www.dhl.com/"},
     "swissloop_sponsor_logos_13-jorimann": {"url": "https://joerimann.com/"},
     "swissloop_sponsor_logos_31-spanset": {"url": "https://www.spanset.com/"},
+    "swissloop_sponsor_logos_14-nexans": {"url": "https://www.nexans.ch/"},
+    "swissloop_sponsor_logos_50-isey": {"url": "https://www.iseyskyr.ch"},
     }
   
 

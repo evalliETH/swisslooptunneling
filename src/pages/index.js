@@ -295,7 +295,7 @@ export default function ScrollPage(props) {
                   `}>
                   
                 </h1>
-                <p css={css`font-size: 1.1em; margin-top: 3em;`}>Swissloop Tunneling @ Not-A-Boring Competition in Las Vegas 6th - 12th September</p>
+                <p css={css`font-size: 1.1em; margin-top: 3em;`}><b>DESIGN</b> and <b>INNOVATION AWARD WINNER</b> and <b>2nd PLACE</b> @ NOT-A-BORING-COMPETITION in Las Vegas, US</p>
                 {/* <h2 className="not-visible visible" css={css`font-weight: 400; font-size: 1em;`}>Swissloop Tunneling</h2> */}
                 <div className="not-visible visible" css={css`margin-top: 20vh;`}>
                   <a href="#s1">

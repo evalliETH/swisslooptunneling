@@ -67,6 +67,14 @@ const MediaPage = ({data}) => {
   <Layout>
     <SEO title="Media" />
     <h1>Media</h1>
+    <h2>Press Releases</h2>
+    <div>
+      <p>
+        Download our Press Kit Documents: <br/>
+        <Button target="_blank" rel="noopener noreferrer" href="/media/competition-press-release-en.pdf">Press Release Competition - EN</Button>
+        <Button target="_blank" rel="noopener noreferrer" href="/media/competition-press-release-de.pdf">Pressemitteilung Competition - DE</Button>
+      </p>            
+    </div>
     <h2>Press Kits</h2>
     <div>
       <p>
@@ -213,7 +221,7 @@ const MediaPage = ({data}) => {
 
     </div>
     <Divider/>
-    <h2>Pictures</h2>
+    <h2>Pictures & Videos</h2>
     {/* <div css={css`
       display: flex;
       flex-direction: row;
@@ -275,7 +283,96 @@ const MediaPage = ({data}) => {
           cursor: pointer;
         }
       `}>
-
+      <StaticImage
+        src="../images/mediaimages/swissloop-tunneling-media-A1.JPG"
+        quality={95}
+        placeholder={"tracedSVG"}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+        layout="constrained"
+        width={1280}
+      />
+      <StaticImage
+        src="../images/mediaimages/swissloop-tunneling-media-A2.JPG"
+        quality={95}
+        placeholder={"tracedSVG"}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+        layout="constrained"
+        width={1280}
+      />
+      <StaticImage
+        src="../images/mediaimages/swissloop-tunneling-media-A3.JPG"
+        quality={95}
+        placeholder={"tracedSVG"}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+        layout="constrained"
+        width={1280}
+      />
+      <StaticImage
+        src="../images/mediaimages/swissloop-tunneling-media-A4.jpg"
+        quality={95}
+        placeholder={"tracedSVG"}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+        layout="constrained"
+        width={1280}
+      />
+      <StaticImage
+        src="../images/mediaimages/swissloop-tunneling-media-A5.jpg"
+        quality={95}
+        placeholder={"tracedSVG"}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+        layout="constrained"
+        width={1280}
+      />
+      <StaticImage
+        src="../images/mediaimages/swissloop-tunneling-media-A6.jpg"
+        quality={95}
+        placeholder={"tracedSVG"}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+        layout="constrained"
+        width={1280}
+      />
+      <StaticImage
+        src="../images/mediaimages/swissloop-tunneling-media-A7.jpg"
+        quality={95}
+        placeholder={"tracedSVG"}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+        layout="constrained"
+        width={1280}
+      />
+      <StaticImage
+        src="../images/mediaimages/swissloop-tunneling-media-A8.JPG"
+        quality={95}
+        placeholder={"tracedSVG"}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+        layout="constrained"
+        width={1280}
+      />
+      <StaticImage
+        src="../images/mediaimages/swissloop-tunneling-media-A9.jpg"
+        quality={95}
+        placeholder={"tracedSVG"}
+        //tracedSVGOptions={{ background: "black", color: "yellow", blackOnWhite: false }}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="Swissloop Tunneling"
+        layout="constrained"
+        width={1280}
+      />
       <StaticImage
         src="../images/mediaimages/swissloop-tunneling-media-1.png"
         quality={95}
@@ -439,8 +536,9 @@ const MediaPage = ({data}) => {
       </div>
       </SRLWrapper>
     </SimpleReactLightbox>
-    <p css={css`text-align:right; margin-top: 1em;`}>Fotografie © <a href="https://janick-entremont.com/">Janick Entremont</a></p>
+    <p css={css`text-align:right; margin-top: 1em; margin-bottom: 2em;`}>Fotografie © <a href="https://janick-entremont.com/">Janick Entremont</a></p>
     
+    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/37GFHcUKvVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   </Layout>
   )
